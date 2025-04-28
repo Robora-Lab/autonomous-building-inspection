@@ -1,0 +1,11 @@
+remote_theme: jekyll/minima
+title: UAV-USV Landing Project Page
+description:
+
+repository: robora-lab/uav-usv-landing
+
+navigation:
+  - title: Robora Lab
+    url: https://roboralab.com/index.html
+  - title: GitHub
+    url: https://github.com/Robora-Lab
