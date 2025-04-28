@@ -1,17 +1,13 @@
 ---
 layout: post
-title: "UAV-USV Landing"
-author: Jess Stephenson, Melissa Greeff, William S. Stewart, Nathan T. Duncan
+title: "Autonomous Building Inspection"
+author: Nick Chodura, Derek Boase, Joshua Woods and Melissa Greeff
 ---
-Welcome to the UAV-USV Landing project! This page covers the progress made on this project to date by members of [Robora Lab](https://roboralab.com/).
+Welcome to the Autonomous Building Inspection project! This page covers the progress made on this project to date by members of [Robora Lab](https://roboralab.com/).
 
 ---
 ### <span style="color: #4568ff;">Background</span>
-Autonomous teams of multirotors and uncrewed surface vessels (USVs) are invaluable to challenging maritime applications, including remote monitoring, search-and-rescue, and surveillance [1], [2], [3]. After deployment in a remote setting, the functional life of the system is ultimately limited by the battery-life of the multirotor. The research that we continue to investigate in this project is the ability to autonomously land a multirotor on a USV for recharging. We address this problem with safe control algorithms and apply control schemes in simulation, testbed validation, and real-world experiments.
 
-Operating in unknown and variable marine conditions, USVs are subject to complex wave-induced motions that include effects on pitch, roll, yaw, sway, surge, and heave [4]. To prevent damage to the multirotor due to severe motion in these degrees of freedom, it must perform a safe and controlled landing [5]. In a robust landing solution, we must consider the variability of the amplitude and frequency of waves due to changing meteorological conditions. We leverage the Great Lakes Coastal Forecasting System to define the range of waves in which our system should succeed.
-
-Contributions of the project are listed below from newest to oldest.
 
 ---
 ### <span style="color: #4568ff;">Benchmarking Model Predictive Control Strategies for Multirotor Landing on a Dynamically Tilting Platform </span>[Winter 2025]
