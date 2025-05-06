@@ -10,14 +10,22 @@ Welcome to the Autonomous Building Inspection project! This page covers the prog
 
 
 ---
-### <span style="color: #4568ff;">Benchmarking Model Predictive Control Strategies for Multirotor Landing on a Dynamically Tilting Platform </span>[Winter 2025]
-##### Accepted to the workshop '25 Years of Aerial Robotics: Challenges and Opportunities' hosted at the 2025 International Conference on Robotics and Automation (ICRA)
+### <span style="color: #4568ff;">Evaluation of Flight Parameters in UAV-based 3D Reconstruction for Rooftop Infrastructure Assessment </span>[Winter 2025]
+##### Accepted as a contributing paper at the 42nd International Symposium on Automation and Robotics in Construction (ISARC)
 
-In prior work, we assume that there is a local region with calm waves that can be reached by both vehicles to then perform a safe landing. In practical scenarios, spatial-temporal assumptions are not realistic if an emergency landing is necessary or if time and resources are constrained. Recognizing that robust multirotor landing on a USV requires safe landing in waves of varying severity, we benchmark the robustness of three different quadratic MPC strategies for landing on the tilting testbed under various frequency (0.5-0.95 Hz) and amplitude (0.1-0.4 rad) conditions.
+In prior rooftop inspection work using UAV photogrammetry, practitioners have relied on very high image overlap and long flight times to ensure model accuracy—constraints that limit operational efficiency in commercial assessments. Recognizing the need to balance flight duration, image capture volume, and reconstruction fidelity, this study systematically explores how ground sampling distance (GSD) and image overlap (OL) affect 3D model quality for complex rooftop infrastructure.
 
-The three strategies are **"Track Position"**, **"Match Rotation"**, and **"Combination"**.
+We conducted nine autonomous flights over a multi‐segment rooftop on Queen’s University’s Ellis Hall with a DJI Phantom 4 Pro V2, varying GSD (0.51–1.49 cm) and OL (60–90%). Photogrammetric reconstructions were generated in Reality Capture, and compared via cloud‑to‑cloud (C2C) metrics—precision, recall, and F‑score—against ground‑truth point clouds from a UAV‑based LiDAR (Zenmuse L2) validated by terrestrial laser scanning (TLS).
 
-In these strategies we include optimization costs that weigh position, attitude, and altitude errors between the multirotor and the platform. Though all strategies successfully land in low-frequency, low-amplitude conditions, they have low success in the higher-amplitude conditions. In this work, we conclude that quadratic MPC cost is not robust to the range of frequencies and amplitudes required for landing in waves.
+Our experiments show that a GSD of 0.75–1.26 cm combined with 85% overlap delivers the optimal trade‑off: it achieves the highest mean F‑score across five roof sections while reducing image counts (233 captures) and compute time (3 min 31 s). Flights at 90% OL yielded no further gains and sometimes lower quality, and lower overlaps (<80%) produced significant distortions. We also confirm that UAV‑LiDAR provides an effective surrogate for TLS ground truth, with an 85% F‑score at a 2 cm threshold in C2C comparisons.
+
+These findings yield three practical guidelines for autonomous rooftop photogrammetry:
+
+1. Use 0.75–1.26 cm GSD with 85% OL to maximize accuracy per image captured.
+2. Avoid overlaps above 85%, which offer diminishing returns.
+3. Supplement flights with targeted manual captures around thin‑walled details (e.g., fencing) and lower sections prone to occlusion.
+
+Together, these recommendations enable efficient, high‑fidelity UAV flight plans for rooftop infrastructure assessment.
 
 {% raw %}
 <div style="display: flex; justify-content: center; margin: 30px 0;">
