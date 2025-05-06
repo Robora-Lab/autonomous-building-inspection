@@ -10,8 +10,8 @@ Welcome to the Autonomous Building Inspection project! This page covers the prog
 
 
 ---
-### <span style="color: #4568ff;">Evaluation of Flight Parameters in UAV-based 3D Reconstruction for Rooftop Infrastructure Assessment </span>[Winter 2025]
-##### Accepted as a contributing paper at the 42nd International Symposium on Automation and Robotics in Construction (ISARC)
+### <span style="color: #4568ff;">Evaluation of Flight Parameters in UAV-based 3D Reconstruction for Rooftop Infrastructure Assessment </span>
+##### Accepted as a contributing paper at the 42nd International Symposium on Automation and Robotics in Construction (ISARC). Check out the paper [here](https://arxiv.org/abs/2504.02084)
 
 In prior rooftop inspection work using UAV photogrammetry, practitioners have relied on very high image overlap and long flight times to ensure model accuracy—constraints that limit operational efficiency in commercial assessments. Recognizing the need to balance flight duration, image capture volume, and reconstruction fidelity, this study systematically explores how ground sampling distance (GSD) and image overlap (OL) affect 3D model quality for complex rooftop infrastructure.
 
@@ -48,57 +48,21 @@ Together, these recommendations enable efficient, high‑fidelity UAV flight pla
 {% endraw %}
 
 ---
-### <span style="color: #4568ff;">A Time and Place to Land: Online Learning-Based Distributed MPC for Multirotor Landing on Surface Vessel in Waves </span>[Summer 2024]
-##### Accepted as a contributing paper at the 2025 International Conference on Unmanned Aircraft Systems (ICUAS). Check out the paper [here](https://arxiv.org/abs/2410.21674)!
-We addressed two limitations of our prior solution in this work. The assumption that a spatial-temporal wave model was perfectly known is not reasonable for practical landing scenarios. In this work we learn the spatial-temporal local wave model from data as a Gaussian Process (GP). The mean and uncertainty quantification from the GP regression are incorporated into our previous distributed MPC framework to enable safer landings in uncertain wave conditions. Another limitation of our prior solution is that it was validated only in simulation. Due to the cost of surface vessels and lack of suitable geographic testing locations, many UAV-USV cooperative landing solutions are similarly bound to simulation. To address this limitation, we built a low-cost testbed platform mounted on an unmanned ground vehicle to mimic the spatial-temporal tilting motion of a USV in waves. Using a Bitcraze Crazyflie 2.1 UAV, and a ClearPath Robotics Husky mounted with our tilting platform, we performed substantial experimental validation of our proposed framework in harsh wave conditions. Our proposed framework achieved a 53% landing success rate improvement over an approach that neglects spatial-temporal tilt motion.
 
-{% raw %}
-<!-- Top Row: Image + Video Side by Side -->
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 30px; margin-top: 30px;">
+### <span style="color: #4568ff;">Cold Region Building Inspection using UAV-based Three-dimensional Reconstruction </span>
+##### Submitted as a contributing paper to the ISPRS International Workshop on Unmanned Aerial Vehicles in Geomatic and Remote Sensing (UAV-g).
+Building inspections in cold climates are essential to prevent structural damage caused by snow accumulation and identify thermal inefficiencies due to thermal bridging. Traditional inspection methods are costly, time-consuming, and hazardous. This research explores UAV-based inspection methods leveraging photogrammetry and infrared thermography for efficient, safe, and accurate assessment.
 
-  <!-- Figure 1 Image -->
-  <figure style="flex: 1; min-width: 300px; text-align: center;">
-    <img src="assets/f6.png" alt="Figure 1" style="width: 100%; max-width: 100%; border-radius: 8px;">
-    <figcaption style="margin-top: 8px; font-style: italic; color: #555;">
-      Tilt of the platform at landing in harsh wave conditions. Our proposed approach (blue) achieves a lower tilt at landing over the approach that neglects tilt (red).
-    </figcaption>
-  </figure>
+The study utilizes UAV-based photogrammetry to measure rooftop snow depth and infrared thermography for thermal reconstruction of building envelopes. UAV flights employed standardized parameters to capture RGB, thermal, and LiDAR data, processed using Reality Capture and CloudCompare software.
 
-  <!-- Embedded YouTube Video -->
-  <figure style="flex: 1; min-width: 300px; text-align: center;">
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe src="https://www.youtube.com/embed/g4cCmE9Rgxs"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-              frameborder="0"
-              allowfullscreen>
-      </iframe>
-    </div>
-    <figcaption style="margin-top: 8px; font-style: italic; color: #555;">
-      Accompanying video.
-    </figcaption>
-  </figure>
+Key contributions and findings:
 
-</div>
+Developed a UAV-based method for accurately measuring rooftop snow depth with an average error under 1 cm, validated against LiDAR and manual measurements.
 
-<!-- Second Row: 3 Figure 1 Images Side-by-Side -->
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+Proposed an RGB-thermal 3D reconstruction technique that avoids complex image alignment methods, achieving high geometric and radiometric accuracy, validated with radiometric control points and thermal imagery comparison.
 
-<figure style="flex: 1; min-width: 250px; text-align: center;">
-  <img src="assets/f5.png" alt="Figure 2" style="width: 100%; border-radius: 8px;">
-  <figcaption style="margin-top: 8px; font-style: italic; color: #555;">
-    Custom tilting platform for ground vehicles. The platform mimics the spatial-temporal tilting motion of a USV in waves.
-  </figcaption>
-</figure>
+The results confirm that UAV-based inspections provide highly accurate, cost-effective alternatives to traditional methods. Challenges remain in managing temperature variability and reflections from low-emissivity surfaces. Future work includes further testing across varied snow conditions and improving temperature accuracy in dynamic environmental conditions.
 
-</div>
-{% endraw %}
-
----
-### <span style="color: #4568ff;">Distributed Model Predictive Control for Cooperative Multirotor Landing on Uncrewed Surface Vessel in Waves </span>[Winter 2024]
-##### Accepted as a contributing paper at the 2024 International Conference on Unmanned Aircraft Systems (ICUAS). Check out the paper [here](https://ieeexplore.ieee.org/document/10557042)!
-We perform safe autonomous landing in simulation using a distributed model predictive control (MPC) scheme. Our proposed architecture combines standard tracking MPCs for the multirotor and USV and augments them with additional artificial goal locations. These artificial goals enable the vehicles to coordinate without prior guidance. Each vehicle solves an individual optimization problem for both the artificial goal and an input that tracks it but only communicates the former to the other vehicle. To account for harsh waters our distributed MPC integrates a spatial-temporal wave model in the cost function encouraging the agents to converge to calmer waters. The wave model maps the location and time to the tilt of the USV. We show in simulation how our approach can simultaneously coordinate in real-time both a safe landing location and execute the landing task for a multirotor on a USV under wave conditions.
-
-We consider three strategies **"Cooperative"**, **"Calm"**, and **"Ride the Wave"**. The "Cooperative" strategy does not include a tilt cost, the "Calm" strategy includes a long-term spatial tilt cost, and the "Ride the Wave" strategy includes a short-term spatial tilt cost.
 
 {% raw %}
 <!-- Top Row: Image + Video Side by Side -->
