@@ -9,6 +9,12 @@ Welcome to the Autonomous Building Inspection project! This page covers the prog
 ### <span style="color: #4568ff;">Background</span>
 
 
+The inspection of rooftops plays a critical role in assessing the structural integrity and maintenance needs of buildings. Traditionally, this task has been carried out by inspectors physically accessing rooftops to identify defects in the building envelope and rooftop equipment. This manual approach is inherently time-consuming, especially for large-scale commercial and industrial structures, and presents significant challenges for visualizing structures.
+
+Advancements in Uncrewed Aerial Vehicle (UAV) technology and photogrammetry have opened new possibilities for building inspections. UAV's equipped with high-resolution cameras can capture images from locations inaccessible to inspectors, enabling comprehensive documentation of structures. These images can be processed using 3D reconstruction techniques to create digital models of the inspected structures. This not only facilitates better visualization of scale and defect locations, but also serves as a historical record for tracking structural changes over time.
+
+This project investigates: (1) optimal practices for producing high-quality 3D reconstructions of rooftop infrastructure, (2) applications of these reconstructions in cold region climates, and (3) autonomous defect detection from the collected data.
+
 ---
 ### <span style="color: #4568ff;">Evaluation of Flight Parameters in UAV-based 3D Reconstruction for Rooftop Infrastructure Assessment </span>
 ##### Accepted as a contributing paper at the 42nd International Symposium on Automation and Robotics in Construction (ISARC). Check out the paper [here](https://arxiv.org/abs/2504.02084)
@@ -56,10 +62,8 @@ Building inspections in cold climates are essential to prevent structural damage
 The study utilizes UAV-based photogrammetry to measure rooftop snow depth and infrared thermography for thermal reconstruction of building envelopes. UAV flights employed standardized parameters to capture RGB, thermal, and LiDAR data, processed using Reality Capture and CloudCompare software.
 
 Key contributions and findings:
-
-Developed a UAV-based method for accurately measuring rooftop snow depth with an average error under 1 cm, validated against LiDAR and manual measurements.
-
-Proposed an RGB-thermal 3D reconstruction technique that avoids complex image alignment methods, achieving high geometric and radiometric accuracy, validated with radiometric control points and thermal imagery comparison.
+1. Developed a UAV-based method for accurately measuring rooftop snow depth with an average error under 1 cm, validated against LiDAR and manual measurements.
+2. Proposed an RGB-thermal 3D reconstruction technique that avoids complex image alignment methods, achieving high geometric and radiometric accuracy, validated with radiometric control points and thermal imagery comparison.
 
 The results confirm that UAV-based inspections provide highly accurate, cost-effective alternatives to traditional methods. Challenges remain in managing temperature variability and reflections from low-emissivity surfaces. Future work includes further testing across varied snow conditions and improving temperature accuracy in dynamic environmental conditions.
 
