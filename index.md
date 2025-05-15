@@ -21,7 +21,7 @@ This project investigates: (1) optimal practices for producing high-quality 3D r
 
 In prior rooftop inspection work using UAV photogrammetry, practitioners have relied on very high image overlap and long flight times to ensure model accuracy—constraints that limit operational efficiency in commercial assessments. Recognizing the need to balance flight duration, image capture volume, and reconstruction fidelity, this study systematically explores how ground sampling distance (GSD) and image overlap affect 3D model quality for complex rooftop infrastructure.
 
-We conducted nine autonomous flights over a multi‐segment rooftop on Queen’s University’s Ellis Hall with a DJI Phantom 4 Pro V2, varying GSD (0.51–1.49 cm) and overlap (60–90%). Photogrammetric reconstructions were generated in Reality Capture, and compared via cloud‑to‑cloud (C2C) metrics—precision, recall, and F‑score—against ground‑truth point clouds from a UAV‑based LiDAR (Zenmuse L2) validated by terrestrial laser scanning (TLS).
+We conducted nine autonomous flights over a multi‐segment rooftop on Queen’s University’s Ellis Hall with a DJI Phantom 4 Pro V2, varying GSD (0.51–1.49 cm) and overlap (60–90%). Photogrammetry-based 3D reconstructions were generated in Reality Capture, and compared via cloud‑to‑cloud (C2C) metrics of precision, recall, and F‑score against ground‑truth point clouds from a UAV‑based LiDAR, validated by terrestrial laser scanning (TLS).
 
 Our experiments show that a GSD of 0.75–1.26 cm combined with 85% overlap delivers the optimal trade‑off: it achieves the highest mean F‑score across five roof sections while reducing image counts (233 captures) and compute time (3 min 31 s). Flights at 90% OL yielded no further gains and sometimes lower quality, and lower overlaps (<80%) produced significant distortions. We also confirm that UAV‑based LiDAR provides an effective alternative for TLS ground truth, with an 85% F‑score at a 2 cm threshold in C2C comparisons of specific test areas.
 
@@ -47,7 +47,7 @@ Together, these recommendations enable efficient, high‑fidelity UAV flight pla
 <figure style="flex: 1; min-width: 250px; text-align: center;">
   <img src="assets/Picture2.png" alt="Figure 2" style="width: 100%; border-radius: 8px;">
   <figcaption style="width: 80%; margin: 8px auto 0 auto; font-style: italic; color: #555;">
-    Experimental landing success rates of the three MPC strategies. "Track Position" (left), "Match Rotation" (center), "Combination" (right).
+    Three models are shown, with flight plans of increasing overlap from top to bottom. RGB (left), precision (middle), and recall (right) scalar fields indicate the error between the models being tested and the ground-truth. The flight path using lower overlap in the top row produced large regions of high error (\textgreater 10 cm), and was unable to recreate simple building geometry. With higher overlap percentages, the error becomes primarily concentrated around regions of high detail, and the lower roof sections with poorer lighting and greater obstruction.
   </figcaption>
 </figure>
 </div>
@@ -72,7 +72,7 @@ The results confirm that UAV-based inspections provide highly accurate, cost-eff
   <figure style="text-align: center; width: 60%; margin: 0 auto;">
     <img src="assets/ellis_snow.svg" alt="Figure 1" style="width: 100%; border-radius: 8px;">
     <figcaption style="width: 100%; margin: 8px auto 0 auto; font-style: italic; color: #555;">
-      Two multirotor paths using two different MPC strategies. On the left the "Track Position" strategy guides the multirotor to the center of the platform where it lands with a significant rotational error. On the right the "Combination" strategy reduces the rotational error but introduces positional error as the multirotor translates to match the rotation of the platform.
+      RGB (left), photogrammetry snow depth map (middle), and LiDAR snow depth map (right). 
     </figcaption>
   </figure>
 </div>
@@ -81,7 +81,7 @@ The results confirm that UAV-based inspections provide highly accurate, cost-eff
 <figure style="flex: 1; min-width: 250px; text-align: center;">
   <img src="assets/thermal_ellis_v3.svg" alt="Figure 2" style="width: 100%; border-radius: 8px;">
   <figcaption style="width: 80%; margin: 8px auto 0 auto; font-style: italic; color: #555;">
-    Experimental landing success rates of the three MPC strategies. "Track Position" (left), "Match Rotation" (center), "Combination" (right).
+    Joint RGB-thermal 3D reconstruction. After images from both datasets are aligned separately, the resulting sparse clouds of tie points are merged. The RGB images are used for meshing, due to their higher spatial resolution and image contrast. The texture is then projected onto the mesh using the thermal images, and a linear transformation can be applied to yield the corrected temperature values.
   </figcaption>
 </figure>
 </div>
