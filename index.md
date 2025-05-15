@@ -33,6 +33,7 @@ These findings yield three practical guidelines for autonomous rooftop photogram
 
 Together, these recommendations enable efficient, high‑fidelity UAV flight plans for rooftop infrastructure assessment.
 
+{% raw %}
 
 <div style=\"display: flex; flex-wrap: wrap; justify-content: space-between; margin: 30px 0;\">
   <figure style=\"flex: 1; min-width: 250px; text-align: center; margin: 0 auto;\">
@@ -51,6 +52,8 @@ Together, these recommendations enable efficient, high‑fidelity UAV flight pla
     </figcaption>
   </figure>
 </div>
+
+{% endraw %}
 
 ---
 
