@@ -39,19 +39,23 @@ Together, these recommendations enable efficient, high‑fidelity UAV flight pla
     <figcaption style="width: 100%; margin: 8px auto 0 auto; font-style: italic; color: #555;">
       Photogrammetry-based 3D reconstructions of rooftop infrastructure. On the left, a GSD of 0.51 - 1.01 cm and an overlap of 85% was used. On the right, the same overlap was used with a larger GSD of 0.75 - 1.26 cm was used. This illustrates the siginifcant change in model quality that can occur by varying these parameters. Thin-walled surfaces feature less occlusions, shown in the green box, and complex geometry was represented better, shown in the walkway in the yellow box.
 
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin: 30px 0;">
+  <figure style="flex: 1; min-width: 250px; text-align: center; margin: 0 auto;">
+    <img src="assets/Picture1.png" alt="Figure 1" style="width: 100%; border-radius: 8px;">
+    <figcaption style="width: 80%; margin: 8px auto 0 auto; font-style: italic; color: #555;">
+      Photogrammetry-based 3D reconstructions of rooftop infrastructure. On the left, a GSD of 0.51 - 1.01 cm and an overlap of 85% was used. On the right, the same overlap was used with a larger GSD of 0.75 - 1.26 cm. This illustrates the significant change in model quality that can occur by varying these parameters. Thin-walled surfaces feature fewer occlusions, shown in the green box, and complex geometry was represented better, shown in the walkway in the yellow box.
     </figcaption>
   </figure>
 </div>
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-<figure style="flex: 1; min-width: 250px; text-align: center;">
-  <img src="assets/Picture2.png" alt="Figure 2" style="width: 100%; border-radius: 8px;">
-  <figcaption style="width: 80%; margin: 8px auto 0 auto; font-style: italic; color: #555;">
-    Three models are shown, with flight plans of increasing overlap from top to bottom. RGB (left), precision (middle), and recall (right) scalar fields indicate the error between the models being tested and the ground-truth. The flight path using lower overlap in the top row produced large regions of high error (\textgreater 10 cm), and was unable to recreate simple building geometry. With higher overlap percentages, the error becomes primarily concentrated around regions of high detail, and the lower roof sections with poorer lighting and greater obstruction.
-  </figcaption>
-</figure>
+  <figure style="flex: 1; min-width: 250px; text-align: center; margin: 0 auto;">
+    <img src="assets/Picture2.png" alt="Figure 2" style="width: 100%; border-radius: 8px;">
+    <figcaption style="width: 80%; margin: 8px auto 0 auto; font-style: italic; color: #555;">
+      Three models are shown, with flight plans of increasing overlap from top to bottom. RGB (left), precision (middle), and recall (right) scalar fields indicate the error between the models being tested and the ground-truth. The flight path using lower overlap in the top row produced large regions of high error (&gt;10 cm) and was unable to recreate simple building geometry. With higher overlap percentages, the error becomes primarily concentrated around regions of high detail, and the lower roof sections with poorer lighting and greater obstruction.
+    </figcaption>
+  </figure>
 </div>
-{% endraw %}
 
 ---
 
