@@ -19,26 +19,26 @@ This project investigates: (1) optimal practices for producing high-quality 3D r
 ### <span style="color: #4568ff;">Evaluation of Flight Parameters in UAV-based 3D Reconstruction for Rooftop Infrastructure Assessment </span>
 ##### Accepted as a contributing paper at the 42nd International Symposium on Automation and Robotics in Construction (ISARC). Check out the paper [here](https://arxiv.org/abs/2504.02084)
 
-In prior rooftop inspection work using UAV photogrammetry, practitioners have relied on very high image overlap and long flight times to ensure model accuracy—constraints that limit operational efficiency in commercial assessments. Recognizing the need to balance flight duration, image capture volume, and reconstruction fidelity, this study systematically explores how ground sampling distance (GSD) and image overlap (OL) affect 3D model quality for complex rooftop infrastructure.
+In prior rooftop inspection work using UAV photogrammetry, practitioners have relied on very high image overlap and long flight times to ensure model accuracy—constraints that limit operational efficiency in commercial assessments. Recognizing the need to balance flight duration, image capture volume, and reconstruction fidelity, this study systematically explores how ground sampling distance (GSD) and image overlap affect 3D model quality for complex rooftop infrastructure.
 
-We conducted nine autonomous flights over a multi‐segment rooftop on Queen’s University’s Ellis Hall with a DJI Phantom 4 Pro V2, varying GSD (0.51–1.49 cm) and OL (60–90%). Photogrammetric reconstructions were generated in Reality Capture, and compared via cloud‑to‑cloud (C2C) metrics—precision, recall, and F‑score—against ground‑truth point clouds from a UAV‑based LiDAR (Zenmuse L2) validated by terrestrial laser scanning (TLS).
+We conducted nine autonomous flights over a multi‐segment rooftop on Queen’s University’s Ellis Hall with a DJI Phantom 4 Pro V2, varying GSD (0.51–1.49 cm) and overlap (60–90%). Photogrammetric reconstructions were generated in Reality Capture, and compared via cloud‑to‑cloud (C2C) metrics—precision, recall, and F‑score—against ground‑truth point clouds from a UAV‑based LiDAR (Zenmuse L2) validated by terrestrial laser scanning (TLS).
 
-Our experiments show that a GSD of 0.75–1.26 cm combined with 85% overlap delivers the optimal trade‑off: it achieves the highest mean F‑score across five roof sections while reducing image counts (233 captures) and compute time (3 min 31 s). Flights at 90% OL yielded no further gains and sometimes lower quality, and lower overlaps (<80%) produced significant distortions. We also confirm that UAV‑LiDAR provides an effective surrogate for TLS ground truth, with an 85% F‑score at a 2 cm threshold in C2C comparisons.
+Our experiments show that a GSD of 0.75–1.26 cm combined with 85% overlap delivers the optimal trade‑off: it achieves the highest mean F‑score across five roof sections while reducing image counts (233 captures) and compute time (3 min 31 s). Flights at 90% OL yielded no further gains and sometimes lower quality, and lower overlaps (<80%) produced significant distortions. We also confirm that UAV‑based LiDAR provides an effective alternative for TLS ground truth, with an 85% F‑score at a 2 cm threshold in C2C comparisons of specific test areas.
 
 These findings yield three practical guidelines for autonomous rooftop photogrammetry:
 
 1. Use 0.75–1.26 cm GSD with 85% OL to maximize accuracy per image captured.
 2. Avoid overlaps above 85%, which offer diminishing returns.
-3. Supplement flights with targeted manual captures around thin‑walled details (e.g., fencing) and lower sections prone to occlusion.
+3. Manual flights are required around thin‑walled objects (e.g., fencing) and lower sections prone to occlusion and poorer lighting.
 
 Together, these recommendations enable efficient, high‑fidelity UAV flight plans for rooftop infrastructure assessment.
-
 {% raw %}
 <div style="display: flex; justify-content: center; margin: 30px 0;">
   <figure style="text-align: center; width: 60%; margin: 0 auto;">
     <img src="assets/Picture1.png" alt="Figure 1" style="width: 100%; border-radius: 8px;">
     <figcaption style="width: 100%; margin: 8px auto 0 auto; font-style: italic; color: #555;">
-      Two multirotor paths using two different MPC strategies. On the left the "Track Position" strategy guides the multirotor to the center of the platform where it lands with a significant rotational error. On the right the "Combination" strategy reduces the rotational error but introduces positional error as the multirotor translates to match the rotation of the platform.
+      Photogrammetry-based 3D reconstructions of rooftop infrastructure. On the left, a GSD of 0.51 - 1.01 cm and an overlap of 85% was used. On the right, the same overlap was used with a larger GSD of 0.75 - 1.26 cm was used. This illustrates the siginifcant change in model quality that can occur by varying these parameters. Thin-walled surfaces feature less occlusions, shown in the green box, and complex geometry was represented better, shown in the walkway in the yellow box.
+
     </figcaption>
   </figure>
 </div>
