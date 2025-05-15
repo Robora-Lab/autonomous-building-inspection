@@ -36,7 +36,7 @@ Together, these recommendations enable efficient, high‑fidelity UAV flight pla
 {% raw %}
 <div style="display: flex; justify-content: center; margin: 30px 0;">
   <figure style="text-align: center; width: 60%; margin: 0 auto;">
-    <img src="assets/f7.png" alt="Figure 1" style="width: 100%; border-radius: 8px;">
+    <img src="assets/Picture1.png" alt="Figure 1" style="width: 100%; border-radius: 8px;">
     <figcaption style="width: 100%; margin: 8px auto 0 auto; font-style: italic; color: #555;">
       Two multirotor paths using two different MPC strategies. On the left the "Track Position" strategy guides the multirotor to the center of the platform where it lands with a significant rotational error. On the right the "Combination" strategy reduces the rotational error but introduces positional error as the multirotor translates to match the rotation of the platform.
     </figcaption>
@@ -45,7 +45,7 @@ Together, these recommendations enable efficient, high‑fidelity UAV flight pla
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
 <figure style="flex: 1; min-width: 250px; text-align: center;">
-  <img src="assets/f8.png" alt="Figure 2" style="width: 100%; border-radius: 8px;">
+  <img src="assets/Picture2.png" alt="Figure 2" style="width: 100%; border-radius: 8px;">
   <figcaption style="width: 80%; margin: 8px auto 0 auto; font-style: italic; color: #555;">
     Experimental landing success rates of the three MPC strategies. "Track Position" (left), "Match Rotation" (center), "Combination" (right).
   </figcaption>
@@ -67,70 +67,23 @@ Key contributions and findings:
 
 The results confirm that UAV-based inspections provide highly accurate, cost-effective alternatives to traditional methods. Challenges remain in managing temperature variability and reflections from low-emissivity surfaces. Future work includes further testing across varied snow conditions and improving temperature accuracy in dynamic environmental conditions.
 
-
 {% raw %}
-<!-- Top Row: Image + Video Side by Side -->
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 5px; margin-top: 30px;">
-
-  <!-- Figure 1 Image -->
-  <figure style="flex: 1; min-width: 300px; text-align: center;">
-    <img src="assets/f1_1.png" alt="Figure 1" style="width: 100%; max-width: 100%; border-radius: 8px;">
-    <figcaption style="margin-top: 8px; font-style: italic; color: #555;">
-      Block diagram of our proposed distributed MPC.
+<div style="display: flex; justify-content: center; margin: 30px 0;">
+  <figure style="text-align: center; width: 60%; margin: 0 auto;">
+    <img src="assets/ellis_snow.svg" alt="Figure 1" style="width: 100%; border-radius: 8px;">
+    <figcaption style="width: 100%; margin: 8px auto 0 auto; font-style: italic; color: #555;">
+      Two multirotor paths using two different MPC strategies. On the left the "Track Position" strategy guides the multirotor to the center of the platform where it lands with a significant rotational error. On the right the "Combination" strategy reduces the rotational error but introduces positional error as the multirotor translates to match the rotation of the platform.
     </figcaption>
   </figure>
-
-  <!-- Embedded YouTube Video -->
-  <figure style="flex: 1; min-width: 300px; text-align: center;">
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe src="https://www.youtube.com/embed/nBaHKCH9xOY"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-              frameborder="0"
-              allowfullscreen>
-      </iframe>
-    </div>
-    <figcaption style="margin-top: 8px; font-style: italic; color: #555;">
-      Recording of ICUAS 2024 presentation materials.
-    </figcaption>
-  </figure>
-
 </div>
 
-<!-- Second Row: 3 Figure 1 Images Side-by-Side -->
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-
-  <figure style="flex: 1; min-width: 250px; text-align: center;">
-    <img src="assets/f2_1.png" alt="Image A" style="width: 100%; border-radius: 8px;">
-    <figcaption style="margin-top: 8px; font-style: italic; color: #555;">
-      "Cooperative" Strategy.
-    </figcaption>
-  </figure>
-
-  <figure style="flex: 1; min-width: 250px; text-align: center;">
-    <img src="assets/f3.png" alt="Image B" style="width: 100%; border-radius: 8px;">
-    <figcaption style="margin-top: 8px; font-style: italic; color: #555;">
-      "Calm" Strategy.
-    </figcaption>
-  </figure>
-
-  <figure style="flex: 1; min-width: 250px; text-align: center;">
-    <img src="assets/f4_1.png" alt="Image C" style="width: 100%; border-radius: 8px;">
-    <figcaption style="margin-top: 8px; font-style: italic; color: #555;">
-      "Ride the Wave" Strategy.
-    </figcaption>
-  </figure>
-
+<figure style="flex: 1; min-width: 250px; text-align: center;">
+  <img src="assets/thermal_ellis_v3.svg" alt="Figure 2" style="width: 100%; border-radius: 8px;">
+  <figcaption style="width: 80%; margin: 8px auto 0 auto; font-style: italic; color: #555;">
+    Experimental landing success rates of the three MPC strategies. "Track Position" (left), "Match Rotation" (center), "Combination" (right).
+  </figcaption>
+</figure>
 </div>
 {% endraw %}
 
----
-### References
-[1]	Y. Wang, W. Liu, J. Liu, and C. Sun, “Cooperative USV–UAV marine search and rescue with visual navigation and reinforcement learning-based control,” ISA Trans., vol. 137, pp. 222–235, 2023.
-
-[2]	J. Wu, R. Li, J. Li, M. Zou, and Z. Huang, “Cooperative unmanned surface vehicles and unmanned aerial vehicles platform as a tool for coastal monitoring activities,” Ocean Coast. Manag., vol. 232, p. 106421, 2023.
-
-[3]	A. Vasilijevic et al., “Heterogeneous robotic system for underwater oil spill survey,” in OCEANS 2015 - Genova, pp. 1–7, 2015.
-
-[4]	T. I. Fossen, Handbook of marine craft hydrodynamics and motion control. John Wiley & Sons, 2011.
-
-[5]	K. Xia, M. Shin, W. Chung, M. Kim, S. Lee, and H. Son, “Landing a quadrotor UAV on a moving platform with sway motion using robust control,” Control Eng. Pract., vol. 128, p. 105288, 2022.
